@@ -1,20 +1,21 @@
 #include <stdio.h>
 int main (){
     
-char sex[5], f, m;
+char sex; // 'm': masculino, 'f': feminino
 
-printf("\n Digite seu sexo f ou m: "); //pegar o sexo da pessoa
-  scanf("%s", &sex);
+printf("\n\n Insira o seu sexo: M - masculino F - feminino \n\n");
+    scanf("%c", &sex);
+    getchar();
 
 float peso,altura,imc;
-     printf ("Digite seu peso: ");
+    printf ("Digite seu peso: ");
     scanf ("%f",&peso);
     printf("Digite sua altura");
     scanf("%f",&altura);
     altura=altura*altura;
     imc=peso/altura;
 
-if(sex == m)
+if (sex == 'm' || sex == 'M')
 
         if (imc<=18.5){
         printf ("Abaixo do Peso ");
@@ -41,7 +42,7 @@ if(sex == m)
         printf ("Obesidade Grau III");
         }
 
-if (sex == f) 
+else if (sex == 'f' || sex == 'F')
 
   if (imc<=19){
         printf ("Abaixo do Peso ");
